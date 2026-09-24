@@ -1,0 +1,6 @@
+{
+  "name": "Arth Barbearia",
+  "description": "Landing page oficial da Arth Barbearia em Umbaúba - SE. Estilo, tradição, cortes masculinos de precisão, barba na toalha quente e agendamento online.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
