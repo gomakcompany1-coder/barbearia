@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-main: #090D16;
+    --bg-card: #0F172A;
+    --bg-card-subtle: #131C31;
+    --text-primary: #F8FAFC;
+    --text-secondary: #94A3B8;
+    --text-muted: #64748B;
+    --border-hairline: rgba(248, 250, 252, 0.08);
+    --border-hover: rgba(248, 250, 252, 0.22);
+    --accent-gold: #C5A059;
+    --accent-gold-light: #E0C07A;
+  }
+
+  html {
+    color-scheme: dark;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Raleway', 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    overflow-x: hidden;
+  }
+
+  /* Custom Typography Utility Classes */
+  .font-display {
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: -0.03em;
+  }
+
+  .font-serif-luxury {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+
+  .font-body {
+    font-family: 'Raleway', sans-serif;
+  }
+
+  .font-mono-num {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Subtle Film Grain Texture */
+.bg-grain {
+  background-image: radial-gradient(rgba(248, 250, 252, 0.03) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Hairline Glass Card */
+.glass-card {
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(248, 250, 252, 0.08);
+}
+
+.glass-card-hover {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card-hover:hover {
+  background: rgba(19, 28, 49, 0.88);
+  border-color: rgba(248, 250, 252, 0.2);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.7);
+}
+
+/* Smooth custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #090D16;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1E293B;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Pulse animation for WhatsApp button */
+@keyframes soft-pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+  }
+  50% {
+    transform: scale(1.04);
+    box-shadow: 0 0 0 14px rgba(37, 211, 102, 0);
+  }
+}
+
+.whatsapp-pulse {
+  animation: soft-pulse 2.8s infinite cubic-bezier(0.4, 0, 0.6, 1);
+}
